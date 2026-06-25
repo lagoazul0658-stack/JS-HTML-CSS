@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como um Site Funciona</title>
+  <style>
+    body {
+      font-family: 'times new roman', Times, serif;
+      line-height: 1.5;
+      margin: 0;
+      background: #f0f4f8;
+      color: #1f2937;
+    }
+
+    header {
+      background: #052fb9;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+      margin-bottom: 1.5rem;
+      padding: 1.6rem;
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    .highlight {
+      color: #1d4ed8;
+      font-weight: 700;
+    }
+
+    .code-box {
+      background: #f8fafc;
+      border-left: 4px solid #2563eb;
+      padding: 1rem;
+      font-family: "Courier New", Courier, monospace;
+      overflow-x: auto;
+    }
+
+    button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #0526bb;
+      color: white;
+      border: none;
+      border-radius: 999px;
+      padding: 0.9rem 1.4rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    button:hover {
+      background: #aa0000;
+    }
+
+    .link-button {
+      display: inline-block;
+      text-decoration: none;
+      background: #2563eb;
+      color: white;
+      padding: 0.85rem 1.4rem;
+      border-radius: 999px;
+      transition: background 0.2s ease;
+    }
+
+    .link-button:hover {
+      background: #1d4ed8;
+    }
+
+    .demo-output {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #eef2ff;
+      border-radius: 0.8rem;
+      color: #1e3a8a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+     <h1>HTML, CSS e JavaScript trabalham juntos para criar páginas na web.</h1>
+    <p>Leonardo Biessek</p>
+    <p>17 anos |  Grupo Lago Azul</p>
+  
+  </header>
+
+  <main>
+    <section>
+      <h2>O que cada linguagem faz</h2>
+      <p>As três linguagens principais de um site trabalham juntas:</p>
+      <ul>
+        <li><strong>HTML</strong> define a estrutura e o conteúdo da página.</li>
+        <li><strong>CSS</strong> define o estilo visual, como cores, fontes e layout.</li>
+        <li><strong>JavaScript</strong> controla o comportamento e a interatividade.</li>
+      </ul>
+      <p><a href="exemplos.html" class="link-button">Veja exemplos ilustrados</a></p>
+    </section>
+
+    <section>
+      <h2>1. HTML: Estrutura do site</h2>
+      <p>HTML define os elementos de uma página, como títulos, textos, imagens, links e formulários.</p>
+      <p>Quando você digita um endereço, o navegador pede os arquivos ao servidor e lê o HTML para montar a página.</p>
+    </section>
+
+    <section>
+      <h2>2. CSS: Aparência e estilo</h2>
+      <p>CSS controla cores, fontes, tamanhos, espaçamento e a posição dos elementos.</p>
+      <p>Ele faz a página ficar visualmente agradável e responsiva para diferentes telas.</p>
+    </section>
+
+    <section>
+      <h2>3. JavaScript: Interatividade</h2>
+      <p>JavaScript adiciona comportamento ao site, como abrir menus, validar formulários e atualizar conteúdo sem recarregar a página.</p>
+      <div class="code-box">
+        <pre>&lt;button id="demoButton"&gt;Clique aqui&lt;/button&gt;</pre>
+      </div>
+      <p>O botão abaixo mostra como o JavaScript pode responder a ações do usuário.</p>
+      <button id="demoButton">Clique para ver</button>
+      <div id="demoOutput" class="demo-output">Ainda não clicado.</div>
+    </section>
+
+    <section>
+      <h2>4. O que acontece quando você acessa um site?</h2>
+      <ol>
+        <li>O navegador envia uma solicitação HTTP ao servidor usando o endereço do site.</li>
+        <li>O servidor responde com arquivos HTML, CSS e JavaScript.</li>
+        <li>O navegador lê o HTML e constrói a estrutura da página.</li>
+        <li>O CSS é aplicado para definir o visual da página.</li>
+        <li>O JavaScript é executado para tornar a página interativa.</li>
+        <li>O Número 67 farma aura.</li>
+      </ol>
+    </section>
+  </main>
+
+  <script>
+    const button = document.getElementById('demoButton');
+    const output = document.getElementById('demoOutput');
+
+    button.addEventListener('click', () => {
+      output.textContent = 'Exemplo de JavaScript: você clicou no botão!';
+      output.style.backgroundColor = '#dbeafe';
+    });
+  </script>
+</body>
+</html>
